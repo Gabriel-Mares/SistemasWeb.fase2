@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Animais</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        /* Estilo para o rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilo para os links no rodapé */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Animal</h1>
+        <form id="cadastroForm">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+                <label for="raca">Raça:</label>
+                <input type="text" id="raca" name="raca" required>
+            </div>
+            <div class="form-group">
+                <label for="tipo">Tipo:</label>
+                <input type="text" id="tipo" name="tipo" required>
+            </div>
+            <div class="form-group">
+                <label for="temperamento">Temperamento:</label>
+                <input type="text" id="temperamento" name="temperamento" required>
+            </div>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("cadastroForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Obtenha os valores dos campos
+            const nome = document.getElementById("nome").value;
+            const raca = document.getElementById("raca").value;
+            const tipo = document.getElementById("tipo").value;
+            const temperamento = document.getElementById("temperamento").value;
+
+            // Aqui você pode fazer o que desejar com os valores, como enviar para um servidor ou exibi-los na página.
+            console.log("Nome:", nome);
+            console.log("Raça:", raca);
+            console.log("Tipo:", tipo);
+            console.log("Temperamento:", temperamento);
+
+            // Você pode adicionar aqui o código para enviar os dados para o servidor, se necessário.
+
+            // Limpar o formulário
+            document.getElementById("cadastroForm").reset();
+        });
+    </script>
+    <footer>
+        <p>Sobre Nós: <a href="quem-somos.html">Quem Somos</a></p>
+        <p>Serviços: <a href="/Agendamento/agendamento.html">Banho e Tosa</a></p>
+        <p>Página principal: <a href="/Busca/busca.html">Busca</a></p>
+        <p>Atendimento: <a href="canais-de-atendimento.html">Canais de Atendimento</a></p>
+        <p>Desenvolvido por: #GabrielMares.cia</p>
+    </footer>
+</body>
+</html>

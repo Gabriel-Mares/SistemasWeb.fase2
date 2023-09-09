@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.form {
+    margin: 20px auto;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+label, select, input {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px; /* Aumenta o tamanho das letras */
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px; /* Aumenta o tamanho das letras */
+    margin-top: 10px; /* Adiciona margem acima do botão */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#mensagem {
+    font-size: 20px; /* Aumenta o tamanho das letras para a mensagem de agendamento */
+    margin-top: 20px; /* Adiciona margem acima da mensagem */
+}

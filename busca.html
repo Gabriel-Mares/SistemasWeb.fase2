@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Produtos</title>
+    <style>
+        /* Estilo para o campo de pesquisa */
+        #search-container {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #search-input {
+            width: 300px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #search-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Estilo para a lista de resultados */
+        #results-container {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            width: 300px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            z-index: 1;
+        }
+
+        .result-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .result-item:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Estilo para o rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Estilo para os links no rodapé */
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="search-container">
+        <input type="text" id="search-input" placeholder="Digite o nome do produto">
+        <button id="search-button">Buscar</button>
+    </div>
+    <div id="results-container"></div>
+
+    <footer>
+        <p>Sobre Nós: <a href="quem-somos.html">Quem Somos</a></p>
+        <p>Serviços: <a href="/Agendamento/agendamento.html">Banho e Tosa</a></p>
+        <p>Página principal: <a href="/Busca/busca.html">Busca</a></p>
+        <p>Atendimento: <a href="canais-de-atendimento.html">Canais de Atendimento</a></p>
+        <p>Desenvolvido por: #GabrielMares.cia</p>
+    </footer>
+
+    <script>
+        const products = [
+            "Ração",
+        ];
+
+        const searchInput = document.getElementById("search-input");
+        const resultsContainer = document.getElementById("results-container");
+        const searchButton = document.getElementById("search-button");
+
+        // Função para atualizar os resultados da pesquisa
+        function updateResults(query) {
+            resultsContainer.innerHTML = "";
+            const filteredProducts = products.filter(product =>
+                product.toLowerCase().includes(query.toLowerCase())
+            );
+
+            filteredProducts.forEach(product => {
+                const resultItem = document.createElement("div");
+                resultItem.className = "result-item";
+                resultItem.textContent = product;
+                resultItem.addEventListener("click", () => {
+                    searchInput.value = product;
+                    resultsContainer.style.display = "none";
+                });
+                resultsContainer.appendChild(resultItem);
+            });
+
+            if (filteredProducts.length === 0) {
+                resultsContainer.style.display = "none";
+            } else {
+                resultsContainer.style.display = "block";
+            }
+        }
+
+        // Event listener para o botão de busca
+        searchButton.addEventListener("click", () => {
+            const query = searchInput.value.toLowerCase();
+            if (query === "ração") {
+                // Redirecionar para o link desejado quando a opção for "Ração"
+                window.location.href = "/Produto/produto1.html";
+            } else {
+                // Implementar outra ação ou redirecionamento para outras opções
+            }
+        });
+
+        // Event listener para o campo de pesquisa
+        searchInput.addEventListener("input", () => {
+            updateResults(searchInput.value);
+        });
+    </script>
+</body>
+</html>

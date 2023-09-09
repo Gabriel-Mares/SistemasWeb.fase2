@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agendamento de Tosa e Banho</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+    /* Estilo para o rodapé */
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+
+    /* Estilo para os links no rodapé */
+    footer a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+</style>
+</head>
+<body>
+    <h1>Agendamento de Tosa e Banho</h1>
+    
+    <div class="form">
+        <label for="servico">Escolha o serviço:</label>
+        <select id="servico">
+            <option value="tosa">Tosa</option>
+            <option value="banho">Banho</option>
+        </select>
+        
+        <label for="data">Escolha a data:</label>
+        <input type="date" id="data">
+        
+        <button id="agendar">Agendar</button>
+        
+        <div id="mensagem"></div> <!-- Movido a mensagem para baixo do botão -->
+    </div>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>Sobre Nós: <a href="quem-somos.html">Quem Somos</a></p>
+        <p>Serviços: <a href="/Agendamento/agendamento.html">Banho e Tosa</a></p>
+        <p>Página principal: <a href="/Busca/busca.html">Busca</a></p>
+        <p>Atendimento: <a href="canais-de-atendimento.html">Canais de Atendimento</a></p>
+        <p>Desenvolvido por: #GabrielMares.cia</p>
+    </footer>
+</body>
+</html>

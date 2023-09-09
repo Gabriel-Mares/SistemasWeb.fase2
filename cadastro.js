@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             // Redirecionar para a página de destino após um pequeno atraso (opcional).
             setTimeout(function () {
-                window.location.href = "/Busca/busca.html";
+                window.location.href = "/busca.html";
             }, 1000); // Redirecionar após 1 segundo (1000 milissegundos).
 
             // Limpa os campos do formulário.

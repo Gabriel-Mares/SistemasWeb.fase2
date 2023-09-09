@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             // Simulação de envio de dados para o servidor.
             alert("Cadastro realizado com sucesso!");
-            window.location.href = "Busca/busca.html";
+            window.location.href = "/busca.html";
         }
     });
 
